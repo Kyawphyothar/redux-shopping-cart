@@ -6,6 +6,8 @@ import {
   removeFromCart,
   removeItemQty,
 } from "../feature/services/CartSlice";
+import {BsTrash } from "react-icons/bs";
+
 const Cart = (props) => {
   const { id, image, title, price, quantity } = props;
   const dispatch = useDispatch();
@@ -13,17 +15,17 @@ const Cart = (props) => {
   const oneItemPrice = price * quantity;
   return (
     <div>
-      <div className="mt-5 flex gap-7 md:gap-20 justify-center">
-        <img src={image} alt="" className=" w-[150px] md:w-[200px]" />
-        <div className=" mt-5">
-          <h1 className=" font-medium  md:text-lg w-48 leading-4 md:leading-6">
+      <div className="mt-5 flex flex-col items-center gap-3 md:flex-row md:items-stretch  md:gap-20 justify-center">
+        <img src={image} alt="" className=" w-[150px] " />
+        <div className=" mt-5 flex flex-col gap-3 w-[240px] md:w-[200px]">
+          <h1 className=" font-medium  md:text-lg  leading-4 md:leading-6">
             {title}
           </h1>
-          <p className="mt-3 select-none">
+          <p className="select-none">
             <span className="text-sm">$ </span>
             <span className=" font-medium ">{oneItemPrice.toFixed(2)}</span>
           </p>
-          <div className="mt-4 flex items-center gap-3 shadow-lg  w-20 justify-center rounded px-2 py-1">
+          <div className=" flex items-center gap-3 shadow-lg  w-20 justify-center rounded px-2 py-1">
             <p className="" onClick={() => dispatch(addItemQty(props))}>
               <HiOutlinePlus className=" cursor-pointer text-lg" />
             </p>
@@ -38,10 +40,10 @@ const Cart = (props) => {
             </p>
           </div>
           <p
-            className="mt-5 text-red-500 font-semibold cursor-pointer select-none"
+            className="mt-5 text-red-500 text-2xl cursor-pointer select-none self-end"
             onClick={() => dispatch(removeFromCart(props))}
           >
-            remove
+            <BsTrash/>
           </p>
         </div>
       </div>

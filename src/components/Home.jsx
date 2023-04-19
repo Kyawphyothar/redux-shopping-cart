@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="mt-18 h-[100vh] flex justify-start items-center bg-gradient-to-b from-green-500 to-sky-300 md:bg-white">
+    <div className="mt-18 h-[100vh] flex justify-start items-center bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-lime-500 via-gray-300 to-green-500 md:bg-none">
       <img
         src="/images/Background.png"
         alt=""
@@ -20,7 +20,7 @@ const Home = () => {
           choosing our website, and we look forward to serving you!
         </p>
         <Link to={"/products"}>
-          <button className=" bg-emerald-600 hover:bg-emerald-500 rounded shadow-lg px-6 py-2 text-white">
+          <button className=" bg-emerald-600 hover:bg-emerald-500 rounded-[3rem] shadow-lg px-10 py-2 text-white">
             Go Shopping
           </button>
         </Link>

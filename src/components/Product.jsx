@@ -1,22 +1,25 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart, addToWishList } from "../feature/services/CartSlice";
-import { Tooltip } from "@mantine/core";
+import { Tooltip, Rating } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart2 } from "react-icons/bs";
+
 const Product = (props) => {
-  const { id, image, title, price } = props;
+  const { id, image, title, price, rating } = props;
   const dispatch = useDispatch();
+
+  const productRating = parseFloat(rating.rate);
   return (
     <div>
       <div className=" flex flex-col items-center p-7 shadow rounded  border">
         <img
           src={image}
           alt=""
-          className=" w-[250px] h-[280px] p-3 md:p-7 md:w-[200px] md:object-cover"
+          className=" w-[150px] p-2 md:p-7 md:w-[200px] md:h-[200px] md:object-cover"
         />
-        <div className=" flex flex-col gap-3 mt-5">
+        <div className=" flex flex-col gap-2 mt-5">
           <Link to={`/detail/${id}`}>
             <Tooltip
               label="View Detail"
@@ -29,6 +32,7 @@ const Product = (props) => {
               </h1>
             </Tooltip>
           </Link>
+          <Rating value={productRating} fractions={2} readOnly />
           <p className=" font-medium">$ {price}</p>
           <div className="flex items-center gap-3">
             <button

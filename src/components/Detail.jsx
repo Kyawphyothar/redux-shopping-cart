@@ -44,10 +44,10 @@ const Detail = () => {
             </Badge>
           </div>
           <span className=" text-sm ">
-            ${" "}
+            $ 
             <span className=" text-lg font-medium">{singleProduct.price}</span>
           </span>
-          <p className=" font-light leading-6 mt-3">
+          <p className=" font-light leading-7 tracking-wide mt-3">
             {singleProduct.description}
           </p>
           <div className="mt-5 flex justify-between">

@@ -35,7 +35,7 @@ const Navbar = () => {
   };
   return (
     <div className=" shadow-lg  bg-white nav-bar">
-      <div className="p-7 flex justify-around align-middle items-center">
+      <div className="p-4 flex justify-between md:justify-around align-middle items-center">
         <Link to={"/"}>
           <h1 className=" font-medium text-xl italic uppercase mr-2">
             Classify
@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className=" flex gap-2">
           <form action="" className="" onSubmit={onSubmitHandler}>
             <Input
-              className=" w-[130px] md:w-[300px] nav-input"
+              className=" w-[130px] md:w-[300px]  nav-input"
               styles={(theme) => ({
                 input: {
                   "&:focus-within": {

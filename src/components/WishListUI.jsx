@@ -32,7 +32,7 @@ const WishListUI = (props) => {
           <span className=" text-sm ">
             $ <span className=" text-lg font-medium">{price}</span>
           </span>
-          <p className=" font-light leading-6 mt-3">
+          <p className=" font-light leading-7 tracking-wide mt-3">
             {description}
           </p>
           <div className="mt-5 flex justify-between">
