@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Product from "./Product";
-import Loading from "./Loading";
+import Product from "../components/Product";
+import Loading from "../components/Loading";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +20,7 @@ const Products = () => {
     return <Loading />;
   }
   return (
-    <div className=" flex flex-wrap gap-10 justify-center mt-28">
+    <div className=" flex flex-wrap gap-10 justify-center ">
       {products.map((product) => {
         return <Product key={product.id} {...product} />;
       })}

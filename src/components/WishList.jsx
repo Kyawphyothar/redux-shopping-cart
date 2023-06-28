@@ -14,7 +14,7 @@ const WishList = () => {
           <h1 className=" text-xl font-medium uppercase text-red-500">
             There's nothing here
           </h1>
-          <Link to={"/products"}>
+          <Link to={"/"}>
           <button className=" bg-emerald-500 hover:bg-emerald-400 text-white px-3 py-1 rounded ">
             Add wishlist
           </button>

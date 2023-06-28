@@ -15,7 +15,7 @@ const AddToCart = () => {
           <h1 className=" text-xl font-medium uppercase text-red-500">
             Your cart is empty!
           </h1>
-          <Link to={"/products"}>
+          <Link to={"/"}>
           <button className=" bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1 rounded ">
             Add items
           </button>

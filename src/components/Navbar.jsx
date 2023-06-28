@@ -4,7 +4,7 @@ import { BsBagCheckFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
-import { CiShop } from "react-icons/ci";
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [products, setProducts] = useState([]);
@@ -34,14 +34,12 @@ const Navbar = () => {
     setSearch("");
   };
   return (
-    <div className=" shadow-lg  bg-white nav-bar">
+    <div className=" shadow-lg  bg-white  nav-bar">
       <div className="p-4 flex justify-between md:justify-around align-middle items-center">
         <Link to={"/"}>
-          <h1 className=" font-medium text-xl italic uppercase mr-2">
-            Classify
-          </h1>
+          <h1 className=" font-medium text-2xl  uppercase mr-2">Classify</h1>
         </Link>
-        <div className=" flex gap-2">
+        <div className=" flex gap-5 items-center">
           <form action="" className="" onSubmit={onSubmitHandler}>
             <Input
               className=" w-[130px] md:w-[300px]  nav-input"
@@ -58,12 +56,7 @@ const Navbar = () => {
               radius="md"
             />
           </form>
-          <Link to={"/products"}>
-              <p className="text-4xl  text-emerald-500">
-                <CiShop />
-              </p>
-            </Link>
-          <div className="flex items-end mb-1 gap-2">
+          <div className="flex items-end mb-1 gap-3">
             <Link to={"wishList"}>
               <div className=" border p-1 rounded-lg text-emerald-500 bg-emerald-50 flex justify-center relative">
                 <p className="text-lg">
@@ -89,6 +82,13 @@ const Navbar = () => {
                   {cartItems.length}
                 </Badge>
               </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link>
+              <p className=" text-gray-600 text-3xl ">
+                <FaUserCircle />
+              </p>
             </Link>
           </div>
         </div>

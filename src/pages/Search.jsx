@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import SearchChild from "./SearchChild";
+import SearchChild from "../components/SearchChild";
 
 const Search = () => {
   const location = useLocation();

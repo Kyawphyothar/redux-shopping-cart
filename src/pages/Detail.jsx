@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Rating, Badge } from "@mantine/core";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../feature/services/CartSlice";
-import Loading from "./Loading";
+import Loading from "../components/Loading";
 
 const Detail = () => {
   const { id } = useParams();
@@ -57,7 +57,7 @@ const Detail = () => {
             >
               Add to your Cart
             </button>
-            <Link to={"/products"}>
+            <Link to={"/"}>
               <button className=" bg-emerald-400   hover:bg-emerald-500 px-2 py-1 text-sm  rounded text-white  ">
                 Back to Shop
               </button>
